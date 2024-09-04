@@ -1,0 +1,49 @@
+package Modificadores;
+
+import java.util.Scanner;
+
+public class ObjetosAnimal {
+
+	public static void main(String[] args) {
+		
+	Scanner ler = new Scanner(System.in);
+		 
+    Animal animal = new Animal();
+    
+    String nome;
+    String cor;
+    String tamanho;
+    double peso;
+    String raca;
+    
+    System.out.println("Informe o nome do animal: ");
+    nome = ler.next();
+ 
+    System.out.println("Informe a cor do animal: ");
+    cor = ler.next();
+ 
+    System.out.println("Informe o tamanho do animal: ");
+    tamanho = ler.next();
+ 
+    System.out.println("Informe o peso do animal: ");
+    peso = ler.nextDouble();
+ 
+    System.out.println("Informe a raça do animal: ");
+    raca = ler.next();
+ 
+    animal.setNome(nome);
+    animal.setCor(cor);
+    animal.setTamanho(tamanho);
+    animal.setPeso(peso);
+    animal.setRaca(raca);
+ 
+    System.out.println("Informações do animal:");
+    System.out.println("Nome: " + animal.getNome());
+    System.out.println("Cor: " + animal.getCor());
+    System.out.println("Tamanho: " + animal.getTamanho());
+    System.out.println("Peso: " + animal.getPeso() + " kg");
+    System.out.println("Raça: " + animal.getRaca());
+ 
+    ler.close();
+    }
+}
